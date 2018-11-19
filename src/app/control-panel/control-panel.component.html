@@ -1,0 +1,8 @@
+<div class="format-actions">
+
+  <button *ngFor="let s of styles" class="format-action + {{activeStyle(s.code)}}" type="button" (click)="format(s)"
+          [disabled]="!word">
+    {{s.label}}
+  </button>
+
+</div>

@@ -1,0 +1,6 @@
+<div class="file" >
+  <span *ngFor="let w of words" (dblclick)="seleccion(w.index)" (blur)="looseSelect()"
+        [class]="w.concatStyles()">
+    {{w.letters}}
+  </span>
+</div>

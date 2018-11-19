@@ -1,0 +1,13 @@
+<aside>
+  <h3>
+    Synonims for {{originalWord?.letters}}:
+  </h3>
+  <p *ngIf="error">No synonims could be found :(</p>
+  <p *ngIf="searching">Seaching for synonims...</p>
+  <ul>
+    <li *ngFor="let syn of synonimslist">
+      {{syn.word}}
+      <button type="button" (click)="replaceFor(syn)">Replace</button>
+    </li>
+  </ul>
+</aside>
